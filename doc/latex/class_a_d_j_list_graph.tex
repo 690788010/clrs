@@ -1,0 +1,233 @@
+\hypertarget{class_a_d_j_list_graph}{}\doxysection{ADJList\+Graph\texorpdfstring{$<$}{<} V \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_a_d_j_list_graph}\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+
+
+图的邻接表表示，算法导论22章22.1节  
+
+
+
+
+{\ttfamily \#include $<$adjlist\+\_\+graph.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}\label{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}} 
+typedef int {\bfseries VIDType}
+\begin{DoxyCompactList}\small\item\em 顶点编号的类型 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}\label{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}} 
+typedef float {\bfseries EWeight\+Type}
+\begin{DoxyCompactList}\small\item\em 权重的类型 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}\label{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}} 
+typedef std\+::tuple$<$ \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}, \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}, \mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeight\+Type}} $>$ {\bfseries Edge\+Tuple\+Type}
+\begin{DoxyCompactList}\small\item\em 边的三元素（顶点1编号，顶点2编号，权重）组成的元组 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_j_list_graph_af656015d38e35918cac299a05716c90f}\label{class_a_d_j_list_graph_af656015d38e35918cac299a05716c90f}} 
+{\bfseries ADJList\+Graph} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_d_j_list_graph_a8fd0e984d9d2503bf5870e2a04ef053b}{ADJList\+Graph}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_j_list_graph_ad95e39230b5c267d8a8d2bfc26388dfe}{add\+\_\+edge}} (const \mbox{\hyperlink{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}{Edge\+Tuple\+Type}} \&edge\+\_\+tuple)
+\begin{DoxyCompactList}\small\item\em 添加一条边 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_d_j_list_graph_a0d60211fcffe539a68a96ab486f3a1ce}{update\+\_\+weight}} (\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id1, \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id2, \mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeight\+Type}} wt)
+\begin{DoxyCompactList}\small\item\em 修改一条边的权重 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_d_j_list_graph_a427198dca5aed69ca26e511e13abf522}{has\+\_\+edge}} (\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id\+\_\+from, \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id\+\_\+to) const
+\begin{DoxyCompactList}\small\item\em 判断图中指定顶点之间是否存在边 \end{DoxyCompactList}\item 
+const std\+::set$<$ \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} $>$ \mbox{\hyperlink{class_a_d_j_list_graph_a25647c79125db1f030f7803416de6dd5}{adj}} (\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id) const
+\begin{DoxyCompactList}\small\item\em 返回顶点v的邻接顶点id的集合 \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}{Edge\+Tuple\+Type}} $>$ \mbox{\hyperlink{class_a_d_j_list_graph_a6bc72c619db46ea739edf36ca6f5a390}{edge\+\_\+tuples}} () const
+\begin{DoxyCompactList}\small\item\em 返回图中所有边的三元素元组集合，这里集合采用{\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::tuple\texorpdfstring{$<$}{<}VIDType,VIDType,EWeight\+Type\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeight\+Type}} \mbox{\hyperlink{class_a_d_j_list_graph_a90a2755617fa73cbf903d74246857dac}{weight}} (\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id\+\_\+from, \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} id\+\_\+to) const
+\begin{DoxyCompactList}\small\item\em 返回图中指定顶点之间的边的权重 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_d_j_list_graph_a6672d7f5432c9cf530815590e3a04e8d}{validate\+\_\+vid}} (\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}} vid) const
+\begin{DoxyCompactList}\small\item\em 验证顶点编号是否有效 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_j_list_graph_a397e4aa23b660c201345959c78f37862}\label{class_a_d_j_list_graph_a397e4aa23b660c201345959c78f37862}} 
+{\footnotesize template$<$int V$>$ }\\std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$ adj\+List\+Graph)
+\begin{DoxyCompactList}\small\item\em 自定义针对标准输出流的输出内容 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$int V$>$\newline
+class ADJList\+Graph$<$ V $>$}
+图的邻接表表示，算法导论22章22.1节 
+
+图的邻接表主要包含一个数据：
+\begin{DoxyItemize}
+\item {\ttfamily \+\_\+array}：邻接表，类型为{\ttfamily std\+::array\texorpdfstring{$<$}{<}std\+::vector\texorpdfstring{$<$}{<}std\+::pair\texorpdfstring{$<$}{<}VIDType,EWeight\+Type\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>},V\texorpdfstring{$>$}{>}}，为{\ttfamily V}行，每一行代表一个节点 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_a_d_j_list_graph_a8fd0e984d9d2503bf5870e2a04ef053b}\label{class_a_d_j_list_graph_a8fd0e984d9d2503bf5870e2a04ef053b}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!ADJListGraph@{ADJListGraph}}
+\index{ADJListGraph@{ADJListGraph}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{ADJListGraph()}{ADJListGraph()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+\mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\mbox{\hyperlink{class_a_d_j_list_graph}{\+::\+ADJList\+Graph}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & 包含对应格式图信息的文件的路径 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_d_j_list_graph_ad95e39230b5c267d8a8d2bfc26388dfe}\label{class_a_d_j_list_graph_ad95e39230b5c267d8a8d2bfc26388dfe}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+void \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}{Edge\+Tuple\+Type}} \&}]{edge\+\_\+tuple }\end{DoxyParamCaption})}
+
+
+
+添加一条边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+tuple} & 一条边的三元素元组 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+为了便于计算，添加边时并不是添加{\ttfamily Edge}类型，而是{\ttfamily std\+::tuple\texorpdfstring{$<$}{<}VIDType,VIDType,EWeight\+Type\texorpdfstring{$>$}{>}}类型的值。
+
+如果指定节点之间的边已经存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常
+
+要求边的顶点均在{\ttfamily \mbox{[}0,V)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加 \mbox{\Hypertarget{class_a_d_j_list_graph_a25647c79125db1f030f7803416de6dd5}\label{class_a_d_j_list_graph_a25647c79125db1f030f7803416de6dd5}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!adj@{adj}}
+\index{adj@{adj}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{adj()}{adj()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+const std\+::set$<$ typename \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{\+::\+VIDType}} $>$ \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::adj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id }\end{DoxyParamCaption}) const}
+
+
+
+返回顶点v的邻接顶点id的集合 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & 顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+顶点v的邻接顶点id的集合 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_j_list_graph_a6bc72c619db46ea739edf36ca6f5a390}\label{class_a_d_j_list_graph_a6bc72c619db46ea739edf36ca6f5a390}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!edge\_tuples@{edge\_tuples}}
+\index{edge\_tuples@{edge\_tuples}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{edge\_tuples()}{edge\_tuples()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+const std\+::vector$<$ typename \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\mbox{\hyperlink{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}{\+::\+Edge\+Tuple\+Type}} $>$ \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::edge\+\_\+tuples}
+
+
+
+返回图中所有边的三元素元组集合，这里集合采用{\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::tuple\texorpdfstring{$<$}{<}VIDType,VIDType,EWeight\+Type\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}} 
+
+\begin{DoxyReturn}{Returns}
+图中所有边的三元素元组集合 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_d_j_list_graph_a427198dca5aed69ca26e511e13abf522}\label{class_a_d_j_list_graph_a427198dca5aed69ca26e511e13abf522}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!has\_edge@{has\_edge}}
+\index{has\_edge@{has\_edge}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{has\_edge()}{has\_edge()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+bool \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::has\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id\+\_\+from,  }\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id\+\_\+to }\end{DoxyParamCaption}) const}
+
+
+
+判断图中指定顶点之间是否存在边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}无效时，抛出异常 \mbox{\Hypertarget{class_a_d_j_list_graph_a0d60211fcffe539a68a96ab486f3a1ce}\label{class_a_d_j_list_graph_a0d60211fcffe539a68a96ab486f3a1ce}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!update\_weight@{update\_weight}}
+\index{update\_weight@{update\_weight}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{update\_weight()}{update\_weight()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+void \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::update\+\_\+weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id1,  }\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id2,  }\item[{\mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeight\+Type}}}]{wt }\end{DoxyParamCaption})}
+
+
+
+修改一条边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id1} & 待修改边的第一个顶点id \\
+\hline
+{\em id2} & 待修改边的第一个顶点id \\
+\hline
+{\em wt} & 新的权重 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+要求{\ttfamily id1}和{\ttfamily id2}均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。
+
+修改顶点{\ttfamily id1}和{\ttfamily id2}直接的边的权重为{\ttfamily wt}。如果指定结点之间的边不存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。 \mbox{\Hypertarget{class_a_d_j_list_graph_a6672d7f5432c9cf530815590e3a04e8d}\label{class_a_d_j_list_graph_a6672d7f5432c9cf530815590e3a04e8d}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!validate\_vid@{validate\_vid}}
+\index{validate\_vid@{validate\_vid}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{validate\_vid()}{validate\_vid()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+bool \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::validate\+\_\+vid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{vid }\end{DoxyParamCaption}) const}
+
+
+
+验证顶点编号是否有效 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vid} & 待验证的顶点编号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+要求边的顶点均在{\ttfamily \mbox{[}0,V)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效 \mbox{\Hypertarget{class_a_d_j_list_graph_a90a2755617fa73cbf903d74246857dac}\label{class_a_d_j_list_graph_a90a2755617fa73cbf903d74246857dac}} 
+\index{ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}!weight@{weight}}
+\index{weight@{weight}!ADJListGraph$<$ V $>$@{ADJListGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{weight()}{weight()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+\mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{\+::\+EWeight\+Type}} \mbox{\hyperlink{class_a_d_j_list_graph}{ADJList\+Graph}}$<$ V $>$\+::weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id\+\_\+from,  }\item[{\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}}]{id\+\_\+to }\end{DoxyParamCaption}) const}
+
+
+
+返回图中指定顶点之间的边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+第一个顶点和第二个顶点之间的边的权重
+\end{DoxyReturn}
+要求边的顶点均在{\ttfamily \mbox{[}0,V)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效
+
+当且仅当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间存在边时返回该边的权重。如果指定结点之间的边不存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/cpp\+Repos/clrs/src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/adjlist\+\_\+graph/\mbox{\hyperlink{adjlist__graph_8h}{adjlist\+\_\+graph.\+h}}\item 
+D\+:/cpp\+Repos/clrs/src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/adjlist\+\_\+graph/adjlist\+\_\+graph.\+cc\end{DoxyCompactItemize}

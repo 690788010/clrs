@@ -1,0 +1,52 @@
+\hypertarget{adjlist__graph_8h_source}{}\doxysection{adjlist\+\_\+graph.\+h}
+\label{adjlist__graph_8h_source}\index{D:/cppRepos/clrs/src/graph\_algorithms/basic\_graph/graph\_representation/adjlist\_graph/adjlist\_graph.h@{D:/cppRepos/clrs/src/graph\_algorithms/basic\_graph/graph\_representation/adjlist\_graph/adjlist\_graph.h}}
+\mbox{\hyperlink{adjlist__graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}\ V>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_d_j_list_graph}{ADJListGraph}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}};\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeightType}};\ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{typedef}\ std::tuple<VIDType,\ VIDType,\ EWeightType>\ \mbox{\hyperlink{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}{EdgeTupleType}};\ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_a_d_j_list_graph_af656015d38e35918cac299a05716c90f}{ADJListGraph}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_a_d_j_list_graph_af656015d38e35918cac299a05716c90f}{ADJListGraph}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_d_j_list_graph_ad95e39230b5c267d8a8d2bfc26388dfe}{add\_edge}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_a_d_j_list_graph_a26db052e3b2a8ea583c5af34a12ebed5}{EdgeTupleType}}\&\ edge\_tuple);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_d_j_list_graph_a0d60211fcffe539a68a96ab486f3a1ce}{update\_weight}}(\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ id1,\ \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ id2,\ \mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeightType}}\ wt);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_d_j_list_graph_a427198dca5aed69ca26e511e13abf522}{has\_edge}}(\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ id\_from,\ \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ id\_to)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{const}\ std::set<VIDType>\ \mbox{\hyperlink{class_a_d_j_list_graph_a25647c79125db1f030f7803416de6dd5}{adj}}(\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<EdgeTupleType>\ \mbox{\hyperlink{class_a_d_j_list_graph_a6bc72c619db46ea739edf36ca6f5a390}{edge\_tuples}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_a_d_j_list_graph_af5a9c4e9435999b03220aed8b3ad1b79}{EWeightType}}\ \mbox{\hyperlink{class_a_d_j_list_graph_a90a2755617fa73cbf903d74246857dac}{weight}}(\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ id\_from,\ \mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ id\_to)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_d_j_list_graph_a6672d7f5432c9cf530815590e3a04e8d}{validate\_vid}}(\mbox{\hyperlink{class_a_d_j_list_graph_a3dd2c22f96422c70e2621d7865884b42}{VIDType}}\ vid)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}\ V>}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{class_a_d_j_list_graph_a397e4aa23b660c201345959c78f37862}{operator<<}}(std::ostream\&\ os,\ \mbox{\hyperlink{class_a_d_j_list_graph}{ADJListGraph<V>}}\ adjListGraph);}
+\DoxyCodeLine{00114\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00115\ \ \ \ \ std::array<std::vector<std::pair<VIDType,\ EWeightType>>,\ V>\ \_array;\ \textcolor{comment}{//\ 图的邻接表}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \_v;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \_e;}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}\ V>}
+\DoxyCodeLine{00121\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \mbox{\hyperlink{class_a_d_j_list_graph}{ADJListGraph<V>}}\ adjListGraph);}
+
+\end{DoxyCode}
