@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('class_matrix_graph.html',''); initResi
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_matrix_graph-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MatrixGraph&lt; V &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -128,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2489564db4176b445fb18f5d8a5477bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a2489564db4176b445fb18f5d8a5477bb">MatrixGraph</a> (<a class="el" href="class_matrix_graph.html#ad4c09f31602c1d8819c5b33b28e76d55">EWeightType</a> val)</td></tr>
 <tr class="memdesc:a2489564db4176b445fb18f5d8a5477bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，指定<code>INVALID_WEIGHT</code>  <br /></td></tr>
 <tr class="separator:a2489564db4176b445fb18f5d8a5477bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278f19f6e5a8db11d7f1b92bbdd0e0d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a278f19f6e5a8db11d7f1b92bbdd0e0d4">MatrixGraph</a> (<a class="el" href="class_matrix_graph.html#ad4c09f31602c1d8819c5b33b28e76d55">EWeightType</a> val, const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a278f19f6e5a8db11d7f1b92bbdd0e0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，指定<code>INVALID_WEIGHT</code>,并使用包含图信息的文件初始化图  <br /></td></tr>
+<tr class="separator:a278f19f6e5a8db11d7f1b92bbdd0e0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7eddf596e5b233562208d4c51d5b6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a2d7eddf596e5b233562208d4c51d5b6e">add_edge</a> (const <a class="el" href="class_matrix_graph.html#af22e7ffa97e46fe42eb6efd281e8c7dc">EdgeTupleType</a> &amp;edge_tuple)</td></tr>
 <tr class="memdesc:a2d7eddf596e5b233562208d4c51d5b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加一条边  <br /></td></tr>
 <tr class="separator:a2d7eddf596e5b233562208d4c51d5b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,10 +141,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8316fa015d0a60913a522fcea9bce263"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a8316fa015d0a60913a522fcea9bce263">has_edge</a> (<a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> id_from, <a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> id_to) const</td></tr>
 <tr class="memdesc:a8316fa015d0a60913a522fcea9bce263"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断图中指定顶点之间是否存在边  <br /></td></tr>
 <tr class="separator:a8316fa015d0a60913a522fcea9bce263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71783b4a6ec81d4a54b93b07d2ef73e4"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a71783b4a6ec81d4a54b93b07d2ef73e4">adj</a> (<a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> id) const</td></tr>
+<tr class="memdesc:a71783b4a6ec81d4a54b93b07d2ef73e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回顶点v的邻接顶点id的集合  <br /></td></tr>
+<tr class="separator:a71783b4a6ec81d4a54b93b07d2ef73e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d46419a836da6eacd6bfae85f3893c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="class_matrix_graph.html#af22e7ffa97e46fe42eb6efd281e8c7dc">EdgeTupleType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#ae3d46419a836da6eacd6bfae85f3893c">edge_tuples</a> () const</td></tr>
+<tr class="memdesc:ae3d46419a836da6eacd6bfae85f3893c"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回图中所有边的三元素元组集合，这里集合采用<code>std::vector&lt;std::tuple&lt;VIDType,VIDType,EWeightType&gt;&gt;</code>  <br /></td></tr>
+<tr class="separator:ae3d46419a836da6eacd6bfae85f3893c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991082bf308b151295ff9e130c851c18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_matrix_graph.html#ad4c09f31602c1d8819c5b33b28e76d55">EWeightType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a991082bf308b151295ff9e130c851c18">weight</a> (<a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> id_from, <a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> id_to) const</td></tr>
+<tr class="memdesc:a991082bf308b151295ff9e130c851c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回图中指定顶点之间的边的权重  <br /></td></tr>
+<tr class="separator:a991082bf308b151295ff9e130c851c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f10c1b8ae75acad3c2a1657d30b600c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_graph.html#a8f10c1b8ae75acad3c2a1657d30b600c">validate_vid</a> (<a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a> vid) const</td></tr>
+<tr class="memdesc:a8f10c1b8ae75acad3c2a1657d30b600c"><td class="mdescLeft">&#160;</td><td class="mdescRight">验证顶点编号是否有效  <br /></td></tr>
+<tr class="separator:a8f10c1b8ae75acad3c2a1657d30b600c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ad4aab5815e17057674c8be61a1c947ff"><td class="memTemplParams" colspan="2"><a id="ad4aab5815e17057674c8be61a1c947ff" name="ad4aab5815e17057674c8be61a1c947ff"></a>
+template&lt;int V&gt; </td></tr>
+<tr class="memitem:ad4aab5815e17057674c8be61a1c947ff"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt; matrixGraph)</td></tr>
+<tr class="memdesc:ad4aab5815e17057674c8be61a1c947ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义针对标准输出流的输出内容 <br /></td></tr>
+<tr class="separator:ad4aab5815e17057674c8be61a1c947ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2489564db4176b445fb18f5d8a5477bb" name="a2489564db4176b445fb18f5d8a5477bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2489564db4176b445fb18f5d8a5477bb">&#9670;&#160;</a></span>MatrixGraph()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2489564db4176b445fb18f5d8a5477bb">&#9670;&#160;</a></span>MatrixGraph() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,6 +185,45 @@ template&lt;int V&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>无效权重值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a278f19f6e5a8db11d7f1b92bbdd0e0d4" name="a278f19f6e5a8db11d7f1b92bbdd0e0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278f19f6e5a8db11d7f1b92bbdd0e0d4">&#9670;&#160;</a></span>MatrixGraph() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;<a class="el" href="class_matrix_graph.html">::MatrixGraph</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix_graph.html#ad4c09f31602c1d8819c5b33b28e76d55">EWeightType</a>&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数，指定<code>INVALID_WEIGHT</code>,并使用包含图信息的文件初始化图 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>无效权重值 </td></tr>
+    <tr><td class="paramname">filename</td><td>包含对应格式图信息的文件的路径 </td></tr>
   </table>
   </dd>
 </dl>
@@ -197,6 +260,54 @@ template&lt;int V&gt; </div>
 <p>为了便于计算，添加边时并不是添加<code>Edge</code>类型，而是<code>std::tuple&lt;VIDType,VIDType,EWeightType&gt;</code>类型的值。</p>
 <p>如果指定节点之间的边已经存在，则抛出<code>std::invalid_argument</code>异常</p>
 <p>要求边的顶点均在<code>[0,V)</code>这个半闭半开区间。如果任何一个值超过该区间则认为顶点<code>id</code>无效，直接返回而不作添加 </p>
+
+</div>
+</div>
+<a id="a71783b4a6ec81d4a54b93b07d2ef73e4" name="a71783b4a6ec81d4a54b93b07d2ef73e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71783b4a6ec81d4a54b93b07d2ef73e4">&#9670;&#160;</a></span>adj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt; typename <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;<a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">::VIDType</a> &gt; <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;::adj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回顶点v的邻接顶点id的集合 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>顶点的<code>id</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>顶点v的邻接顶点id的集合 </dd></dl>
+
+</div>
+</div>
+<a id="ae3d46419a836da6eacd6bfae85f3893c" name="ae3d46419a836da6eacd6bfae85f3893c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d46419a836da6eacd6bfae85f3893c">&#9670;&#160;</a></span>edge_tuples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; typename <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;<a class="el" href="class_matrix_graph.html#af22e7ffa97e46fe42eb6efd281e8c7dc">::EdgeTupleType</a> &gt; <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;::edge_tuples</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回图中所有边的三元素元组集合，这里集合采用<code>std::vector&lt;std::tuple&lt;VIDType,VIDType,EWeightType&gt;&gt;</code> </p>
+<dl class="section return"><dt>Returns</dt><dd>图中所有边的三元素元组集合 </dd></dl>
 
 </div>
 </div>
@@ -287,6 +398,78 @@ template&lt;int V&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 <p>要求<code>id1</code>和<code>id2</code>均在<code>[0,N)</code>这个半闭半开区间。如果任何一个值超过该区间则认为顶点<code>id</code>无效，则抛出<code>std::invalid_argument</code>异常。</p>
 <p>修改顶点<code>id1</code>和<code>id2</code>直接的边的权重为<code>wt</code>。如果指定结点之间的边不存在，则抛出<code>std::invalid_argument</code>异常。 </p>
+
+</div>
+</div>
+<a id="a8f10c1b8ae75acad3c2a1657d30b600c" name="a8f10c1b8ae75acad3c2a1657d30b600c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f10c1b8ae75acad3c2a1657d30b600c">&#9670;&#160;</a></span>validate_vid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;::validate_vid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a>&#160;</td>
+          <td class="paramname"><em>vid</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>验证顶点编号是否有效 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vid</td><td>待验证的顶点编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
+<p>要求边的顶点均在<code>[0,V)</code>这个半闭半开区间。如果任何一个值超过该区间则认为顶点<code>id</code>无效 </p>
+
+</div>
+</div>
+<a id="a991082bf308b151295ff9e130c851c18" name="a991082bf308b151295ff9e130c851c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991082bf308b151295ff9e130c851c18">&#9670;&#160;</a></span>weight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;<a class="el" href="class_matrix_graph.html#ad4c09f31602c1d8819c5b33b28e76d55">::EWeightType</a> <a class="el" href="class_matrix_graph.html">MatrixGraph</a>&lt; V &gt;::weight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a>&#160;</td>
+          <td class="paramname"><em>id_from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_matrix_graph.html#a82a7a902f0e6b88e8e3207b76835a854">VIDType</a>&#160;</td>
+          <td class="paramname"><em>id_to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回图中指定顶点之间的边的权重 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_from</td><td>第一个顶点的<code>id</code> </td></tr>
+    <tr><td class="paramname">id_to</td><td>第二个顶点的<code>id</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>第一个顶点和第二个顶点之间的边的权重</dd></dl>
+<p>要求边的顶点均在<code>[0,V)</code>这个半闭半开区间。如果任何一个值超过该区间则认为顶点<code>id</code>无效</p>
+<p>当且仅当<code>id_from</code>与<code>id_to</code>之间存在边时返回该边的权重。如果指定结点之间的边不存在，则抛出<code>std::invalid_argument</code>异常。 </p>
 
 </div>
 </div>

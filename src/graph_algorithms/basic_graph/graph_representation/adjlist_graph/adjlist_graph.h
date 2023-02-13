@@ -112,7 +112,7 @@ public:
 	template<int V>
 	friend std::ostream& operator<<(std::ostream& os, ADJListGraph<V> adjListGraph);
 private:
-	std::array<std::vector<std::pair<VIDType, EWeightType>>, V> _array;	///< 图的邻接表
+	std::array<std::vector<std::pair<VIDType, EWeightType>>, V> _array;	// 图的邻接表
 	int _v;
 	int _e;
 };
