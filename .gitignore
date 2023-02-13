@@ -39,6 +39,9 @@
 *.tlog
 *.log
 *.idb
+*.vcxproj
+*.filters
+*.vcxproj.user
 
 # data
 largeG.txt
