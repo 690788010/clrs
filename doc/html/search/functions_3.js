@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_5fweight_0',['update_weight',['../class_a_d_j_list_graph.html#a0d60211fcffe539a68a96ab486f3a1ce',1,'ADJListGraph']]]
+  ['matrixgraph_0',['MatrixGraph',['../class_matrix_graph.html#aa91095f391e591fad1049031e919b58e',1,'MatrixGraph::MatrixGraph()'],['../class_matrix_graph.html#a2489564db4176b445fb18f5d8a5477bb',1,'MatrixGraph::MatrixGraph(EWeightType val)']]]
 ];

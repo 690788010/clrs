@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../class_a_d_j_list_graph.html#a397e4aa23b660c201345959c78f37862',1,'ADJListGraph']]]
+  ['matrixgraph_0',['MatrixGraph',['../class_matrix_graph.html',1,'MatrixGraph&lt; V &gt;'],['../class_matrix_graph.html#aa91095f391e591fad1049031e919b58e',1,'MatrixGraph::MatrixGraph()'],['../class_matrix_graph.html#a2489564db4176b445fb18f5d8a5477bb',1,'MatrixGraph::MatrixGraph(EWeightType val)']]]
 ];

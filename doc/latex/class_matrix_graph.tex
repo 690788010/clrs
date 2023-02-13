@@ -1,0 +1,125 @@
+\hypertarget{class_matrix_graph}{}\doxysection{Matrix\+Graph\texorpdfstring{$<$}{<} V \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_matrix_graph}\index{MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}\label{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}} 
+typedef int {\bfseries VIDType}
+\begin{DoxyCompactList}\small\item\em 顶点编号的类型 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}\label{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}} 
+typedef float {\bfseries EWeight\+Type}
+\begin{DoxyCompactList}\small\item\em 权重的类型 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_graph_af22e7ffa97e46fe42eb6efd281e8c7dc}\label{class_matrix_graph_af22e7ffa97e46fe42eb6efd281e8c7dc}} 
+typedef std\+::tuple$<$ \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}, \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}, \mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeight\+Type}} $>$ {\bfseries Edge\+Tuple\+Type}
+\begin{DoxyCompactList}\small\item\em 边的三元素（顶点1编号，顶点2编号，权重）组成的元组 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_matrix_graph_aa91095f391e591fad1049031e919b58e}\label{class_matrix_graph_aa91095f391e591fad1049031e919b58e}} 
+{\bfseries Matrix\+Graph} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数，指定{\ttfamily INVALID\+\_\+\+WEIGHT}为0 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix_graph_a2489564db4176b445fb18f5d8a5477bb}{Matrix\+Graph}} (\mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeight\+Type}} val)
+\begin{DoxyCompactList}\small\item\em 构造函数，指定{\ttfamily INVALID\+\_\+\+WEIGHT} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_graph_a2d7eddf596e5b233562208d4c51d5b6e}{add\+\_\+edge}} (const \mbox{\hyperlink{class_matrix_graph_af22e7ffa97e46fe42eb6efd281e8c7dc}{Edge\+Tuple\+Type}} \&edge\+\_\+tuple)
+\begin{DoxyCompactList}\small\item\em 添加一条边 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_graph_a18c92beff89e9119ca6c52f04d6f6259}{update\+\_\+weight}} (\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}} id1, \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}} id2, \mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeight\+Type}} wt)
+\begin{DoxyCompactList}\small\item\em 修改一条边的权重 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_matrix_graph_a8316fa015d0a60913a522fcea9bce263}{has\+\_\+edge}} (\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}} id\+\_\+from, \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}} id\+\_\+to) const
+\begin{DoxyCompactList}\small\item\em 判断图中指定顶点之间是否存在边 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_matrix_graph_a2489564db4176b445fb18f5d8a5477bb}\label{class_matrix_graph_a2489564db4176b445fb18f5d8a5477bb}} 
+\index{MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}!MatrixGraph@{MatrixGraph}}
+\index{MatrixGraph@{MatrixGraph}!MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixGraph()}{MatrixGraph()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+\mbox{\hyperlink{class_matrix_graph}{Matrix\+Graph}}$<$ V $>$\mbox{\hyperlink{class_matrix_graph}{\+::\+Matrix\+Graph}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeight\+Type}}}]{val }\end{DoxyParamCaption})}
+
+
+
+构造函数，指定{\ttfamily INVALID\+\_\+\+WEIGHT} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & 无效权重值 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matrix_graph_a2d7eddf596e5b233562208d4c51d5b6e}\label{class_matrix_graph_a2d7eddf596e5b233562208d4c51d5b6e}} 
+\index{MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+void \mbox{\hyperlink{class_matrix_graph}{Matrix\+Graph}}$<$ V $>$\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_matrix_graph_af22e7ffa97e46fe42eb6efd281e8c7dc}{Edge\+Tuple\+Type}} \&}]{edge\+\_\+tuple }\end{DoxyParamCaption})}
+
+
+
+添加一条边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+tuple} & 一条边的三元素元组 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+为了便于计算，添加边时并不是添加{\ttfamily Edge}类型，而是{\ttfamily std\+::tuple\texorpdfstring{$<$}{<}VIDType,VIDType,EWeight\+Type\texorpdfstring{$>$}{>}}类型的值。
+
+如果指定节点之间的边已经存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常
+
+要求边的顶点均在{\ttfamily \mbox{[}0,V)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加 \mbox{\Hypertarget{class_matrix_graph_a8316fa015d0a60913a522fcea9bce263}\label{class_matrix_graph_a8316fa015d0a60913a522fcea9bce263}} 
+\index{MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}!has\_edge@{has\_edge}}
+\index{has\_edge@{has\_edge}!MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{has\_edge()}{has\_edge()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+bool \mbox{\hyperlink{class_matrix_graph}{Matrix\+Graph}}$<$ V $>$\+::has\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}}]{id\+\_\+from,  }\item[{\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}}]{id\+\_\+to }\end{DoxyParamCaption}) const}
+
+
+
+判断图中指定顶点之间是否存在边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool
+\end{DoxyReturn}
+当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}无效时，抛出异常 \mbox{\Hypertarget{class_matrix_graph_a18c92beff89e9119ca6c52f04d6f6259}\label{class_matrix_graph_a18c92beff89e9119ca6c52f04d6f6259}} 
+\index{MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}!update\_weight@{update\_weight}}
+\index{update\_weight@{update\_weight}!MatrixGraph$<$ V $>$@{MatrixGraph$<$ V $>$}}
+\doxysubsubsection{\texorpdfstring{update\_weight()}{update\_weight()}}
+{\footnotesize\ttfamily template$<$int V$>$ \\
+void \mbox{\hyperlink{class_matrix_graph}{Matrix\+Graph}}$<$ V $>$\+::update\+\_\+weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}}]{id1,  }\item[{\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}}]{id2,  }\item[{\mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeight\+Type}}}]{wt }\end{DoxyParamCaption})}
+
+
+
+修改一条边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id1} & 待修改边的第一个顶点id \\
+\hline
+{\em id2} & 待修改边的第一个顶点id \\
+\hline
+{\em wt} & 新的权重 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+要求{\ttfamily id1}和{\ttfamily id2}均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。
+
+修改顶点{\ttfamily id1}和{\ttfamily id2}直接的边的权重为{\ttfamily wt}。如果指定结点之间的边不存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/cpp\+Repos/clrs/src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/matrix\+\_\+graph/matrix\+\_\+graph.\+h\item 
+D\+:/cpp\+Repos/clrs/src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/matrix\+\_\+graph/matrix\+\_\+graph.\+cc\end{DoxyCompactItemize}

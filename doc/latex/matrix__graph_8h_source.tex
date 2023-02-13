@@ -1,0 +1,33 @@
+\hypertarget{matrix__graph_8h_source}{}\doxysection{matrix\+\_\+graph.\+h}
+\label{matrix__graph_8h_source}\index{D:/cppRepos/clrs/src/graph\_algorithms/basic\_graph/graph\_representation/matrix\_graph/matrix\_graph.h@{D:/cppRepos/clrs/src/graph\_algorithms/basic\_graph/graph\_representation/matrix\_graph/matrix\_graph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}\ V>\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix_graph}{MatrixGraph}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}};\ \ \ \ \ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeightType}};\ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{typedef}\ std::tuple<VIDType,\ VIDType,\ EWeightType>\ \mbox{\hyperlink{class_matrix_graph_af22e7ffa97e46fe42eb6efd281e8c7dc}{EdgeTupleType}};\ \ \ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_matrix_graph_aa91095f391e591fad1049031e919b58e}{MatrixGraph}}()\ :\ \mbox{\hyperlink{class_matrix_graph}{MatrixGraph}}(0)\ \{\};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_matrix_graph_aa91095f391e591fad1049031e919b58e}{MatrixGraph}}(\mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeightType}}\ val);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_matrix_graph_a2d7eddf596e5b233562208d4c51d5b6e}{add\_edge}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix_graph_af22e7ffa97e46fe42eb6efd281e8c7dc}{EdgeTupleType}}\&\ edge\_tuple);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_matrix_graph_a18c92beff89e9119ca6c52f04d6f6259}{update\_weight}}(\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}\ id1,\ \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}\ id2,\ \mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeightType}}\ wt);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_matrix_graph_a8316fa015d0a60913a522fcea9bce263}{has\_edge}}(\mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}\ id\_from,\ \mbox{\hyperlink{class_matrix_graph_a82a7a902f0e6b88e8e3207b76835a854}{VIDType}}\ id\_to)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ std::array<std::array<EWeightType,\ N>,\ N>\ \_matrix;\ \ \textcolor{comment}{//\ 图的矩阵}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix_graph_ad4c09f31602c1d8819c5b33b28e76d55}{EWeightType}}\ INVALID\_WEIGHT;\ \ \ \ \textcolor{comment}{//\ 无效权重，是一个const值，一旦图被初始化之后就无法改变}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \_v;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \_e;}
+\DoxyCodeLine{00061\ \};}
+
+\end{DoxyCode}
